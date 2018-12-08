@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+}
+
+.grocery-bg{
+  background-color: #ececec;
+  margin: 0 10px;
+ }
+.grocery-bg ul li{cursor: pointer;}
+
+.shopping-bg{
+  background-color: #e4f1fe;
+  margin: 0px 10px;
+}
+.shopping-bg ul li{cursor: pointer;}
+
+.states-bg{
+  background-color: #f2f1ef;
+  margin: 0px 10px;
+}
