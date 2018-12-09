@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addGrocery } from '../action'
+import { addGrocery, removePocketMonye } from '../action'
 
 
 class Grocery extends Component {
@@ -10,7 +10,12 @@ class Grocery extends Component {
         <h2 className="text-center">Grocery Items</h2>
         <ul className="list-group">
           {this.props.grocery.map((item) => {
-            return <li className="list-group-item" key={item.id} onClick={() => this.props.addGrocery(item.id)}>
+            return <li className="list-group-item" key={item.id}
+              onClick={() => {
+                this.props.removePocketMonye(item.id)
+                this.props.addGrocery(item.id)
+              }
+              }>
 
               <b>{item.name}</b>-
               <span className="label label-info">{item.cost}</span>-
@@ -32,4 +37,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { addGrocery })(Grocery)
+export default connect(mapStateToProps, { addGrocery, removePocketMonye })(Grocery)

@@ -3,10 +3,9 @@ import { connect } from 'react-redux'
 
 class PocketMoney extends Component {
   render() {
-    console.log('rrrrrrrrrrrrrr', this.props.money)
     return (
       <div>
-        <h2 className='text-center'>You have <span className='label label-success'>${this.props.money}</span> amount to spend Grocery Today!</h2>
+        <h2 className='text-center' style={{ marginTop: "0px", paddingBottom: "22px" }}>You have <span className='label label-success'>${this.props.money}</span> amount to spend Grocery Today!</h2>
       </div>
     )
   }
